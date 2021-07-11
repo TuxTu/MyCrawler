@@ -8,8 +8,8 @@ class Saver(object):
         self.stock_list = {}
 
     def store_data(self, name, code):
-        name.replace('*', '')
-        re.sub(r'\(.*', '', name)
+        name = name.replace('*', '')
+        name = re.sub(r'\(.*', '', name)
         self.stock_list[name] = code
 
     def output_data(self):
